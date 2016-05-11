@@ -1,14 +1,4 @@
-# Swift-Watson-Guis
-
-Let's bring up the Xcode Development Environment
-
-
-
-
-
-
-
-
+# My Cognitive App Visual
 
 Let's build our GUI
 
@@ -20,14 +10,10 @@ The GUI consists of a text field, a label and a button.  We will implement these
 When the user presses the button, the URL in the text field is sent to Watson which analysis the provided picture in the URL and returns a resulting analysis  in the JSON form of the image with a confidence score.
 In the first iteration we will take the text in the text field and simply echo it in the label field when we press the button.
 
+## Connect the GUI in Main.storyboard to the code in the ViewController file:
 
-
-Connect the GUI in Main.storyboard to the code in the ViewController file:
-
-
-
-
-Connect the TextField
+### 1. Connect the TextField
+We are going to analyse this picture:
 https://farm4.staticflickr.com/3754/11702702564_1fc3c669ba_m.jpg
 
 In the Main.storyboard:
@@ -37,38 +23,37 @@ Right-click on the TextField (contains the URL to a graphics file of your choice
 2.	Enter urlText as the Name  in the popup dialog.
 3.	Insert between Class ViewController and override… 
 4.	Click Connect
-5.	The result is: @IBOutlet var urlText: [UITextField]!
+5.	The result is: 
+```swift
+@IBOutlet var urlText: [UITextField]!
+```
 
-
-Connect the Label Field
-
-
+### 2. Connect the Label Field
 
 Right-click on the LabelField (Currently empty)
 1.	Select New Reference Outlet Collection from drop-down list
 2.	Enter analysisTextLabel as the Name  in the popup dialog.
 3.	Insert after the urlText  
 4.	Click Connect
-5.	The result is: @IBOutlet var analysislTextLabel: [UITextField]!
+5.	The result is: 
+```swift
+@IBOutlet var analysislTextLabel: [UITextField]!
+```
 
-
-
-Connect the Button
-
-
+### 3. Connect the Button
 Right-click on the Button 
 1.	Select Touch Up Inside from drop-down list
 2.	Enter analysisButtonPressed as the Name  in the popup dialog.
 3.	Insert at the end of the  ViewController Class
 4.	Click Connect
-5.	The result is: @IBAction func analysisButtonPressed(sender: AnyObject) {            
-   }
-
-
-
+5.	The result is: 
+```swift
+@IBAction func analysisButtonPressed(sender: AnyObject) {            
+}
+```
 
 We will now add some code to the analysisButtonPressed method.
-
+```swift
 import UIKit
 
 class ViewController: UIViewController {
@@ -92,10 +77,7 @@ class ViewController: UIViewController {
         
     }
 }
-
-
-
-
+```
 
 The NSLog method will allow us to log our actions. And setting the textStatusLabel.text to textField.text will allow us to show the output from the textField in the Label field.
 
@@ -103,10 +85,10 @@ Now let’s test this by doing a build and execute our app.
 
 We enter a url to an image file in the text field. This name is printed to the log file. Once we have added the Watson Service, Watson will return an analysis of the image to the label field.
 
+We press the Visual Analysis button to see the output in the Log area.
 
+See the entire LAB github: https://github.com/blumareks/bluereporter/tree/master/AppWithWatsonVisualAnalysis
 
-We press the Visual Analysis button
+My blog: [blumareks blogspot](http://blumareks.blogspot.com/2016/03/blue-reporter-v21-gets-cognitive-in.html)
 
-
-
-The output in the Log area
+My Twitter handle: [@blumareks](https://twitter.com/blumareks)
