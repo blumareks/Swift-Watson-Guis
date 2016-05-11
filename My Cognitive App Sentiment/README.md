@@ -1,4 +1,4 @@
-# Swift-Watson-Guis
+# My Cognitive App Sentiment
 
 Let's build our GUI
 
@@ -11,40 +11,52 @@ When the user presses the button, the text in the text field is sent to Watson w
 In the first iteration we will take the text in the text field and simply echo it in the label field when we press the button.
 
 
-Connect the GUI in Main.storyboard to the code in the ViewController file:
+## Connect the GUI 
 
-Connect the TextField
+Do the following steps in Main.storyboard to the code in the ViewController file.
+
+### 1. Connect the TextField
 
 In the Main.storyboard:
-
 Right-click on the TextField (contains “This is a very positive message”)
 1.	Select New Reference Outlet Collection from drop-down list
 2.	Enter textField in the popup dialog.
 3.	Insert between Class ViewController and override… 
 4.	Click Connect
-5.	The result is: @IBOutlet var textField: [UITextField]!
+5.	The result is: 
+```swift
+@IBOutlet var textField: [UITextField]!
+```
 
 
+The inserted text is:
+```swift
+@IBOutlet weak var textField: UITextField!
+```
 
-The inserted text is:    @IBOutlet weak var textField: UITextField!
-
-Connect the Button
+### 2. Connect the Button
 
 
-The inserted text is: 
+The inserted text is:
+```swift
 @IBAction func checkButtonPressed(sender: AnyObject) {
         
     }
+```
 
 
-Connect the Text Label
+### 3. Connect the Text Label
 
 
-The inserted text is:   @IBOutlet weak var textStatusLabel: UILabel!
+The inserted text is:
+```swift
+@IBOutlet weak var textStatusLabel: UILabel!
+```
 
 Let’s test the code we have written so far:
 
 We will now add some code to the checkButtonPressed method.
+```swift
 import UIKit
 
 class ViewController: UIViewController {
@@ -71,7 +83,7 @@ class ViewController: UIViewController {
         textStatusLabel.text = textField.text
     }
 }
-
+```
 
 
 The NSLog method will allow us to log our actions. And setting the textStatusLabel.text to textField.text will allow us to show the output from the textField in the Label field.
@@ -79,3 +91,7 @@ The NSLog method will allow us to log our actions. And setting the textStatusLab
 Now let’s test this by doing a build and execute our app.
 
 We enter a short text segment in the text field. This text is copied to the label field. Once we have added the Watson Service, Watson will return a Sentiment Analysis, which will be displayed in the Label Field.
+
+See the entire LAB github: https://github.com/blumareks/bluereporter/tree/master/AppWithWatsonSentiment
+[blumareks blogspot](http://blumareks.blogspot.com/2016/03/blue-reporter-v21-gets-cognitive-in.html)
+[@blumareks](https://twitter.com/blumareks)
