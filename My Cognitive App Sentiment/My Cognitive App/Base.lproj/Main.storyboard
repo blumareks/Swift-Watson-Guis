@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_Cognitive_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="This is an exciting news!" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6TP-vf-aRK">
+                                <rect key="frame" x="20" y="20" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O83-t6-YJr">
+                                <rect key="frame" x="20" y="58" width="171" height="30"/>
+                                <state key="normal" title="Send it to Watson Button"/>
+                                <connections>
+                                    <action selector="checkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8l-n5-ogB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1R-Wl-HVY">
+                                <rect key="frame" x="20" y="96" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O83-t6-YJr" firstAttribute="top" secondItem="6TP-vf-aRK" secondAttribute="bottom" constant="8" id="27B-bI-mk7"/>
+                            <constraint firstItem="6TP-vf-aRK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JmA-CF-5xM"/>
+                            <constraint firstItem="6TP-vf-aRK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QWI-fn-44t"/>
+                            <constraint firstItem="T1R-Wl-HVY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="R3P-ju-uLF"/>
+                            <constraint firstItem="T1R-Wl-HVY" firstAttribute="top" secondItem="O83-t6-YJr" secondAttribute="bottom" constant="8" id="bw6-bc-Aif"/>
+                            <constraint firstItem="T1R-Wl-HVY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ceB-hz-fnU"/>
+                            <constraint firstItem="O83-t6-YJr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e9Z-WG-6wZ"/>
+                            <constraint firstItem="6TP-vf-aRK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oIY-wM-eEh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="6TP-vf-aRK" id="8dc-5l-fUH"/>
+                        <outlet property="textStatusLabel" destination="T1R-Wl-HVY" id="Bwk-70-jV5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="389"/>
+        </scene>
+    </scenes>
+</document>
