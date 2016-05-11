@@ -93,5 +93,7 @@ Now let’s test this by doing a build and execute our app.
 We enter a short text segment in the text field. This text is copied to the label field. Once we have added the Watson Service, Watson will return a Sentiment Analysis, which will be displayed in the Label Field.
 
 See the entire LAB github: https://github.com/blumareks/bluereporter/tree/master/AppWithWatsonSentiment
-[blumareks blogspot](http://blumareks.blogspot.com/2016/03/blue-reporter-v21-gets-cognitive-in.html)
-[@blumareks](https://twitter.com/blumareks)
+
+My blog: [blumareks blogspot](http://blumareks.blogspot.com/2016/03/blue-reporter-v21-gets-cognitive-in.html)
+
+My Twitter handle: [@blumareks](https://twitter.com/blumareks)
