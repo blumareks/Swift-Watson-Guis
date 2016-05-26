@@ -5,7 +5,11 @@ Please find the GUIs for the 3 SWIFT - Watson LABs:
 - [My Cognitive Visual](https://github.com/blumareks/Swift-Watson-Guis/tree/master/My%20Cognitive%20App%20Visual)
 - [My Cognitive Text-to-Speech](https://github.com/blumareks/Swift-Watson-Guis/tree/master/My%20Cognitive%20App%20TTS)
 
-As soon as you fork each of the labs you might want to run Carthage.
+As soon as you fork each of the labs you might want to run Carthage to enable Watson SDK frameworks needed in your Swift application. You need to run with the following command from the command line at the root of the project: 
+```
+carthage update --platform iOS
+```
+
 
 ## Installing and running Carthage
 The initial setup of the Carthage is the following:
