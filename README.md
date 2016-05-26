@@ -66,13 +66,24 @@ Section in Build Phases: "Copy Files" - Add all of the frameworks you added to X
 
 
 
-We will now update info.plist with the ability to call outside services
-
-![alt text](https://1.bp.blogspot.com/-0qksfX9ylOE/VwB6R8z2DmI/AAAAAAAAAnU/lZm685I9mzIthp1QgsXAzxBJHJvy1VSVw/s1600/Screenshot%2B2016-04-02%2B19.00.15.png "info.plist")
-
-info.plist:
-
-
-
+We will now update info.plist with the ability to call outside services of Watson.Add the following to your info.plist. In order to make network calls to Watson, we need to whitelist the URL to the watsonplatform.net server.
+```xml
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>watsonplatform.net</key>
+            <dict>
+                <key>NSTemporaryExceptionRequiresForwardSecrecy</key>
+                <false/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+```
+![alt text](https://2.bp.blogspot.com/-5eM1XYycYJk/V0duGPihzsI/AAAAAAAAArw/777t2WdU39UoJv8IbIF_5lNMp1eLCeQpQCLcB/s1600/WhitelistingWatson.png "Copy Files")
 
 
