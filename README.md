@@ -60,7 +60,7 @@ This is the list of the framework libraries:
 Build target. In the "Build Phases" tab, add a new Copy Files Phase and set its destination to "Frameworks".
 Copy all the frameworks that have been added one by one.
 
-Section in Build Phases: "Copy Files":
+Section in Build Phases: "Copy Files" - Add all of the frameworks you added to Xcode to the Copy Files Phase - see the result below:
 
 ![alt text](https://2.bp.blogspot.com/-6-KWU48Y97w/VwB6SOToE0I/AAAAAAAAAnY/ygiZvHNGY5scrAxh7DGBdhAV12gnmdVWg/s1600/Screenshot%2B2016-04-02%2B19.00.29.png "Copy Files")
 
