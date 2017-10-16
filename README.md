@@ -52,19 +52,12 @@ The process will issue “Fetching”, “Checking out” and “Building scheme
 ### Add the SDK to the Xcode project
 
 Create a new Group in your Xcode project called "Framework" under the project name.
-And select all the framework files in the Carthage/Build/iOS/ directory of your project (Alamofire, AlamofireObjectMapper, HTTPStatusCodes, ObjectMapper, Starscream). Drag-and-drop those files from Finder into the new "Framework" group inside of your project in Xcode. When the dialog appears, make sure you deselect the option to copy items. This will create a reference to those Framework files without copying them.
-
-This is the list of the framework libraries:
-![alt text](https://1.bp.blogspot.com/-zsEmgLOiZp8/VwB6Rx0FNRI/AAAAAAAAAnc/byvcBUMoObs0HzHKEEmPri1faszUWv31Q/s1600/Screenshot%2B2016-04-02%2B19.00.03.png "framework libraries")
+And select all the framework files in the Carthage/Build/iOS/ directory of your project (RestKit.framework and your selected service(s)). Drag-and-drop those files from Finder into the new "Framework" group inside of your project in Xcode. When the dialog appears, make sure you deselect the option to copy items. This will create a reference to those Framework files without copying them.
 
 Build target. In the "Build Phases" tab, add a new Copy Files Phase and set its destination to "Frameworks".
 Copy all the frameworks that have been added one by one.
 
-Section in Build Phases: "Copy Files" - Add all of the frameworks you added to Xcode to the Copy Files Phase - see the result below:
-
-![alt text](https://2.bp.blogspot.com/-6-KWU48Y97w/VwB6SOToE0I/AAAAAAAAAnY/ygiZvHNGY5scrAxh7DGBdhAV12gnmdVWg/s1600/Screenshot%2B2016-04-02%2B19.00.29.png "Copy Files")
-
-
+Section in Build Phases: "Copy Files" - Add all of the frameworks you added to Xcode to the Copy Files Phase.
 
 We will now update info.plist with the ability to call outside services of Watson.Add the following to your info.plist. In order to make network calls to Watson, we need to whitelist the URL to the watsonplatform.net server.
 ```xml
