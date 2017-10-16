@@ -17,9 +17,7 @@ The initial setup of the Carthage is the following:
 https://github.com/Carthage/Carthage#installing-carthage
 
 We will use the Carthage dependency manager to install libraries used by our app.
-To install Carthage on our system, we will download and run the latest release of the Carthage.pkg file: https://github.com/Carthage/Carthage/releases , then follow the on-screen instructions.
-
-Alternatively, only on Xcode 7.x, we can use Homebrew and install the Carthage tool on our system simply by running brew update and brew install carthage. (note: if you previously installed the binary version of Carthage, you should delete /Library/Frameworks/CarthageKit.framework).
+To install Carthage on our system, we can use Homebrew and install the Carthage tool on our system simply by running brew update and brew install carthage. (note: if you previously installed the binary version of Carthage, you should delete /Library/Frameworks/CarthageKit.framework).
 
 If you’d like to run the latest development version (which may be highly unstable or incompatible), simply clone the master branch of the repository, then run make install.
 
