@@ -32,7 +32,7 @@ cat > cartfile
 ```
 - Enter the following line:
 ```
-github "watson-developer-cloud/ios-sdk" "v0.2.5"
+github "watson-developer-cloud/ios-sdk"
 ```
 - Enter a new line
 - Enter "control+C" to leave the edit
